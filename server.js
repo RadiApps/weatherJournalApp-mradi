@@ -29,6 +29,10 @@ app.get("/getWeather",(req,res)=>{
     res.send(projectData);
 })
 app.post("/addWeather",(req,res)=>{
-    res.send();
+    let d = req.body;
+    projectData['date']=d.date;
+    projectData['temp']=d.temp;
+    projectData['feelings']=d.feelings;
+    res.send("Post received");
 })
   
